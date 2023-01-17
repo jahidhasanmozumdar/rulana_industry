@@ -94,7 +94,7 @@
     width: 100vw;
     background-image: url('../Asset/1.jpg');
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .bannerTwo{
@@ -102,7 +102,7 @@
     width: 100vw;
     background-image: url('../Asset/2.jpg');
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .bannerThree{
@@ -110,7 +110,7 @@
     width: 100vw;
     background-image: url('../Asset/3.jpg');
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 .navbars{
@@ -121,4 +121,40 @@
     min-height: 4rem/* 64px */;
     width: 100%; 
     padding: 20px 0;
+}
+.play-button{
+    color: #ff7607;
+    font-size: 50px;
+    position: absolute;
+    margin: auto;
+    right: 1000px;
+}
+.play-button::before,.play-button::after{
+    content: '';
+    position: absolute;
+    border: 2px solid #ff7607;
+    border-radius: 50%;
+    left: -10px;
+    right: -10px;
+    top: -10px;
+    bottom: -10px;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+}
+.play-button::after{
+    animation-delay: 0.5;
+}
+@keyframes animate{
+    0%
+    {
+        transform: scale(.5);
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1.5);
+    }
 }
